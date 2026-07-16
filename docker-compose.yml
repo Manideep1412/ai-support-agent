@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      MongoDB__ConnectionString: "${MONGODB_CONNECTION_STRING}"
+      MongoDB__Database: support_agent
+      OpenAI__ApiKey: "${OPENAI_API_KEY}"
+      OpenAI__ChatModel: gpt-4o-mini
+      OpenAI__EmbeddingModel: text-embedding-3-small
+      AllowedOrigins__0: "http://localhost:3000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: "http://localhost:5000"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

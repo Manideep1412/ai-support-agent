@@ -1,0 +1,41 @@
+# ── .NET ──────────────────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.log
+*.nupkg
+
+# !! SECRETS — never commit real credentials
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+# Commit appsettings.example.json instead (no real values)
+
+# ── Node / Next.js ────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Env files ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ── OS ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────
+.idea/
+.vscode/settings.json
+*.swp
