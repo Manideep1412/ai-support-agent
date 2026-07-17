@@ -21,7 +21,7 @@ export default function ChatPage() {
 
   // Close history panel on outside click
   useEffect(() => {
-    function onClickOutside(e: MouseEvent) {
+    function onClickOutside(e: globalThis.MouseEvent) {
       if (historyRef.current && !historyRef.current.contains(e.target as Node))
         setShowHistory(false);
     }
