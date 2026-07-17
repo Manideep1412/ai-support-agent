@@ -26,13 +26,9 @@ builder.Services.AddSwaggerGen(opt =>
 });
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
-var allowedOrigins = builder.Configuration
-    .GetSection("AllowedOrigins").Get<string[]>()
-    ?? ["http://localhost:3000"];
-
 builder.Services.AddCors(opt =>
     opt.AddDefaultPolicy(p => p
-        .WithOrigins(allowedOrigins)
+        .AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod()));
 
