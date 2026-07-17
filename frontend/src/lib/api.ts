@@ -1,6 +1,6 @@
 import type { Article, SessionDto, SessionSummary, SseEvent } from '@/types';
 
-const BASE = '/api';   // proxied to backend via next.config.ts
+const BASE = `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000'}/api`;
 
 // ── Chat ──────────────────────────────────────────────────────────────────────
 
