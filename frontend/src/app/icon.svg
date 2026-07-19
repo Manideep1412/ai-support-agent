@@ -2,12 +2,13 @@
   <defs>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#4f8ef7"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
     </linearGradient>
-    <clipPath id="clip">
-      <rect width="32" height="32" rx="8"/>
-    </clipPath>
   </defs>
-  <rect width="32" height="32" rx="8" fill="#0d1117"/>
-  <text x="16" y="23" font-family="'Arial Black', Arial, sans-serif" font-size="19" font-weight="900" text-anchor="middle" fill="url(#g)">M</text>
+  <rect width="32" height="32" rx="7" fill="url(#g)"/>
+  <rect x="5" y="8" width="22" height="14" rx="4" fill="white"/>
+  <path d="M8 22 L6 28 L13 22Z" fill="white"/>
+  <circle cx="11" cy="15" r="1.8" fill="#22d3ee"/>
+  <circle cx="16" cy="15" r="1.8" fill="#22d3ee"/>
+  <circle cx="21" cy="15" r="1.8" fill="#22d3ee"/>
 </svg>
