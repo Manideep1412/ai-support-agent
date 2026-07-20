@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SourceCard from './SourceCard';
 import type { Message } from '@/types';
 
-// ── Inline content renderer (handles ```blocks``` and `inline`) ───────────────
+// ── Inline content renderer (handles ```blocks``` and `inline`) ─────────────
 
 function CodeBlock({ lang, code }: { lang: string; code: string }) {
   const [copied, setCopied] = useState(false);
