@@ -129,7 +129,7 @@ export default function ChatPage() {
   return (
     <div className="flex flex-col h-screen bg-slate-50">
       {/* ── Header ── */}
-      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between shrink-0 relative z-20">
+      <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-3 flex items-center justify-between shrink-0 relative z-20">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 bg-indigo-600 rounded-xl flex items-center justify-center shadow-sm">
             <span className="text-white text-sm font-bold">AI</span>
@@ -143,24 +143,24 @@ export default function ChatPage() {
         <div className="flex items-center gap-2">
           <Link
             href="/admin"
-            className="flex items-center gap-1.5 text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+            className="flex items-center gap-1.5 text-sm text-gray-500 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
           >
             <BookOpen size={15} />
-            Knowledge Base
+            <span className="hidden sm:inline">Knowledge Base</span>
           </Link>
 
           {/* History button + dropdown */}
           <div className="relative" ref={historyRef}>
             <button
               onClick={showHistory ? () => setShowHistory(false) : openHistory}
-              className="flex items-center gap-1.5 text-sm text-gray-500 px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-1.5 text-sm text-gray-500 px-2 sm:px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <History size={15} />
-              History
+              <span className="hidden sm:inline">History</span>
             </button>
 
             {showHistory && (
-              <div className="absolute right-0 top-full mt-2 w-80 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+              <div className="absolute right-0 top-full mt-2 w-[min(320px,calc(100vw-2rem))] bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
                 <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
                   <span className="text-sm font-semibold text-gray-700">Recent conversations</span>
                   <button onClick={() => setShowHistory(false)} className="text-gray-400 hover:text-gray-600">
@@ -206,10 +206,10 @@ export default function ChatPage() {
 
           <button
             onClick={handleNewChat}
-            className="flex items-center gap-1.5 text-sm bg-indigo-600 text-white px-3 py-1.5 rounded-lg hover:bg-indigo-700 transition-colors"
+            className="flex items-center gap-1.5 text-sm bg-indigo-600 text-white px-2 sm:px-3 py-1.5 rounded-lg hover:bg-indigo-700 transition-colors"
           >
             <Plus size={15} />
-            New chat
+            <span className="hidden sm:inline">New chat</span>
           </button>
         </div>
       </header>

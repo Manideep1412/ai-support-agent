@@ -97,7 +97,7 @@ export default function AdminPage() {
       )}
 
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+      <header className="bg-white border-b border-gray-200 px-4 sm:px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link href="/" className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
             <ArrowLeft size={18} className="text-gray-500" />
@@ -132,7 +132,7 @@ export default function AdminPage() {
       </header>
 
       {/* Articles */}
-      <main className="max-w-4xl mx-auto px-6 py-6">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
         {loading ? (
           <div className="flex justify-center py-20">
             <Loader2 className="animate-spin text-gray-400" size={32} />
