@@ -7,7 +7,7 @@ using SupportAgent.API.Models.Entities;
 
 namespace SupportAgent.API.Services;
 
-public class ChatService
+public class ChatService : IChatService
 {
     private readonly MongoDbContext _db;
     private readonly OpenAIService _ai;

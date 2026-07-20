@@ -6,7 +6,7 @@ using SupportAgent.API.Models.Entities;
 
 namespace SupportAgent.API.Services;
 
-public class KnowledgeService
+public class KnowledgeService : IKnowledgeService
 {
     private readonly MongoDbContext _db;
     private readonly OpenAIService _ai;

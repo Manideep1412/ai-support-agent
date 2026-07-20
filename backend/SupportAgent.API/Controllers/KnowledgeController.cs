@@ -10,9 +10,9 @@ namespace SupportAgent.API.Controllers;
 [Produces("application/json")]
 public class KnowledgeController : ControllerBase
 {
-    private readonly KnowledgeService _knowledge;
+    private readonly IKnowledgeService _knowledge;
 
-    public KnowledgeController(KnowledgeService knowledge) => _knowledge = knowledge;
+    public KnowledgeController(IKnowledgeService knowledge) => _knowledge = knowledge;
 
     /// <summary>Return all knowledge base articles.</summary>
     /// <remarks>

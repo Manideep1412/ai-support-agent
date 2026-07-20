@@ -11,12 +11,12 @@ namespace SupportAgent.API.Controllers;
 [Produces("application/json")]
 public class ChatController : ControllerBase
 {
-    private readonly ChatService _chat;
+    private readonly IChatService _chat;
 
     private static readonly JsonSerializerOptions _json =
         new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
 
-    public ChatController(ChatService chat) => _chat = chat;
+    public ChatController(IChatService chat) => _chat = chat;
 
     /// <summary>Ask a question and receive a streamed AI answer via Server-Sent Events (SSE).</summary>
     /// <remarks>

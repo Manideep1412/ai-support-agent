@@ -39,3 +39,19 @@ desktop.ini
 .idea/
 .vscode/settings.json
 *.swp
+
+# ── Test output ───────────────────────────────────────────────────
+coverage/
+.nyc_output/
+backend/TestResults/
+backend/**/*.coverage
+backend/**/coverage.cobertura.xml
+backend/**/lcov.info
+*.tsbuildinfo
+
+# ── Docker local overrides ────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Certificates ─────────────────────────────────────────────────
+*.pfx
+*.p12

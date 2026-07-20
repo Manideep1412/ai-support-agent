@@ -12,8 +12,8 @@ builder.Services.AddSingleton<MongoDbContext>();
 
 // ── OpenAI + domain services ─────────────────────────────────────────────────
 builder.Services.AddSingleton<OpenAIService>();
-builder.Services.AddSingleton<KnowledgeService>();
-builder.Services.AddSingleton<ChatService>();
+builder.Services.AddSingleton<IKnowledgeService, KnowledgeService>();
+builder.Services.AddSingleton<IChatService, ChatService>();
 
 // ── Controllers ───────────────────────────────────────────────────────────────
 builder.Services.AddControllers();
