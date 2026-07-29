@@ -11,7 +11,7 @@ public class ChatService : IChatService
 {
     private readonly MongoDbContext _db;
     private readonly OpenAIService _ai;
-    private readonly KnowledgeService _knowledge;
+    private readonly IKnowledgeService _knowledge;
     private readonly ILogger<ChatService> _logger;
 
     private const string SystemPromptTemplate = """
@@ -31,7 +31,7 @@ public class ChatService : IChatService
     public ChatService(
         MongoDbContext db,
         OpenAIService ai,
-        KnowledgeService knowledge,
+        IKnowledgeService knowledge,
         ILogger<ChatService> logger)
     {
         _db       = db;
